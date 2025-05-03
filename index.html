@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genghis Khan - Legacy of the Khan</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="banner">
+      <div class="banner-text">
+        <h1>Genghis Khan</h1>
+        <p>The Rise of the Mongol Empire</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#early-life">Early Life</a>
+      <a href="#conquests">Conquests</a>
+      <a href="#legacy">Legacy</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="fade-in">
+      <h2>Welcome to the World of Genghis Khan</h2>
+      <p>This site explores the life, impact, and era of one of history's most legendary rulers.</p>
+    </section>
+
+    <section id="early-life" class="content-section fade-in">
+      <h2>Early Life</h2>
+      <div class="grid">
+        <!-- Repeat with real images and links -->
+        <div class="card">
+          <img src="img1.jpg" alt="Early life photo">
+          <p>Description of image here.</p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+      <p>Insert 1.5 paragraph summary about Genghis Khan’s early years here...</p>
+    </section>
+
+    <section id="conquests" class="content-section fade-in">
+      <h2>Conquests</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="img2.jpg" alt="Conquest image">
+          <p>Description of image here.</p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+      <p>Insert 1.5 paragraph summary about his military campaigns here...</p>
+    </section>
+
+    <section id="legacy" class="content-section fade-in">
+      <h2>Legacy</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="img3.jpg" alt="Legacy image">
+          <p>Description of image here.</p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+      <p>Insert 1.5 paragraph summary about his long-term impact here...</p>
+    </section>
+
+    <section id="quiz" class="fade-in">
+      <h2>Fun Quiz</h2>
+      <div id="quiz-container">
+        <p>Who was Genghis Khan?</p>
+        <button onclick="checkAnswer(this, true)">Founder of the Mongol Empire</button>
+        <button onclick="checkAnswer(this, false)">A Chinese emperor</button>
+        <button onclick="checkAnswer(this, false)">A Roman general</button>
+        <p id="feedback"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h3>About Genghis Khan</h3>
+    <p>Genghis Khan, born Temujin, united the Mongol tribes and built the largest land empire in history. Life under his rule was harsh but highly organized, with an advanced communication system and surprising religious tolerance.</p>
+    <p><em>"I am the flail of God. If you had not committed great sins, God would not have sent a punishment like me upon you."</em></p>
+  </footer>
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/26/audio_1e0e542fd1.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const images = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg"];
+    let current = 0;
+    setInterval(() => {
+      const banner = document.querySelector(".banner");
+      current = (current + 1) % images.length;
+      banner.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${images[current]})`;
+    }, 10000);
+
+    function checkAnswer(button, correct) {
+      const feedback = document.getElementById("feedback");
+      feedback.textContent = correct ? "Correct!" : "Wrong, try again.";
+      feedback.style.color = correct ? "lightgreen" : "red";
+    }
+  </script>
+</body>
+</html>
