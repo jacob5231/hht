@@ -1,0 +1,140 @@
+/* === Global Styles === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a0a;
+  color: #eaeaea;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-family: 'UnifrakturCook', cursive;
+}
+
+/* === Header and Banner === */
+header {
+  position: relative;
+  text-align: center;
+}
+
+.banner {
+  height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img1.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-image 1s ease-in-out;
+}
+
+.banner-text {
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+
+nav {
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 0 0 12px 12px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  background: #1a1a1a;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: #333;
+}
+
+/* === Sections === */
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Grid Cards === */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #111;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card a {
+  color: #66ccff;
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration: underline;
+}
+
+/* === Quiz Styles === */
+#quiz-container button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#quiz-container button:hover {
+  background-color: #444;
+}
+
+/* === Footer === */
+footer {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 12px 12px 0 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer em {
+  display: block;
+  margin-top: 15px;
+  color: #aaa;
+  font-style: italic;
+}
